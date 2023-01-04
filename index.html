@@ -7,16 +7,34 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <!-- title -->
         <div class="titleTxt">
             Etch-a-sketch
         </div>
-        <div class="mainCon">
-            <div class="btnCon">
-                <button>Color Mode</button>
-            </div>
-            <div class="drawCon">
 
+        <!-- Flexbox for buttons container and draw canvas -->
+        <div class="mainCon">
+            <!-- buttons container -->
+            <div class="btnCon">
+                <!-- color choose button -->
+                <input class="colorPicker" type="color">
+                <!-- color mode button -->
+                <button class="colorMode">Color Mode</button>
+                <!-- rainbow mode button -->
+                <button class="rainMode">Rainbow Mode</button>
+                <!-- eraser mode button -->
+                <button class="eraser">Eraser</button>
+                <!-- clear all button -->
+                <button class="clearAll">Clear All</button>
+                <!-- adjusting drawing canvas size button -->
+                <div class="sizeCon">
+                    <div class="sizeTxt">1 x 1</div>
+                    <input class="sizeBtn" type="range">    
+                </div>
             </div>
+            <!-- drawing canvas -->            
+            <div class="drawCon"></div>
         </div>
+        <!-- footer -->  
     </body>
 </html>
