@@ -19,20 +19,29 @@ body{
     background-color: hsl(180, 100%, 90%);
 }
 
-/* center title */
-.titleTxt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
-    font-size: 4rem;
-}
-
 /* center main flexbox */
 .mainCon{
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
+}
+
+/* grid container */
+.mainGrid{
+    display: grid;
+    grid-template-areas: 
+    ". title"
+    "btn draw";
+}
+
+/* center title */
+.titleTxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    grid-area: title;
 }
 
 /* buttons container */
@@ -44,6 +53,7 @@ body{
     justify-content: space-around;
     align-items: center;
     height: var(---canvasSize);
+    grid-area: btn;
 }
 
 /* buttons */
@@ -57,9 +67,18 @@ body{
     border-radius: 15px;
 }
 
+.btnCon button:hover{
+    transform: scale(1.08);
+}
+
+.btnCon button:active{
+    color: white;
+    background-color: black;
+    border: black;
+}
+
 /* color picker */
 .colorPicker{
-    /* overflow: hidden; */
     width: 80px;
     height: 80px;
     border: none;
@@ -77,9 +96,39 @@ body{
     border-radius: 50%;
 }
 
+/* size text */
+.sizeTxt{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* size button */
+.sizeBtn {
+    -webkit-appearance: none;
+    width: 200px;
+    border-radius: 20px;
+}
+
+/* track */
+.sizeBtn::-webkit-slider-runnable-track {
+height: 20px;
+border: 1px solid;
+border-radius: 20px;
+}
+
+/* track circle */
+.sizeBtn::-webkit-slider-thumb {
+-webkit-appearance: none;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: hsl(0, 0%, 0%);
+}
+
 /* canvas */
 .drawCon{
-    /* border: solid 1px; */
     background-color: hsl(0, 0%, 100%);
     box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
     width: var(---canvasSize);
@@ -87,5 +136,6 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-area: draw;
 }
 
