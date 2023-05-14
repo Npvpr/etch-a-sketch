@@ -16,18 +16,18 @@
 
 /* body */
 body{
-    background-color: hsl(180, 100%, 90%);
+    background-color: hsla(180, 100%, 50%, 0.3);
 }
 
 /* center main flexbox */
-.mainCon{
+.mainCenDiv{
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
 }
 
 /* grid container */
-.mainGrid{
+.mainGridDiv{
     display: grid;
     grid-template-areas: 
     ". title"
@@ -35,7 +35,7 @@ body{
 }
 
 /* center title */
-.titleTxt{
+.titleP{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,7 @@ body{
 
 /* buttons container */
 /* flex column buttons */
-.btnCon{
+.btnDiv{
     margin-right: 5rem;
     display: flex;
     flex-direction: column;
@@ -57,7 +57,7 @@ body{
 }
 
 /* buttons */
-.btnCon button{
+.btnDiv button{
     background-color: hsla(0, 0%, 0%, 0);
     font-family: Roboto;
     font-size: 1.2rem;
@@ -67,18 +67,19 @@ body{
     border-radius: 15px;
 }
 
-.btnCon button:hover{
+.btnDiv button:hover{
     transform: scale(1.08);
 }
 
-.btnCon button:active{
+.btnDiv .active{
+    transform: scale(1.08);
     color: white;
     background-color: black;
     border: black;
 }
 
 /* color picker */
-.colorPicker{
+.colorPickerInput{
     width: 80px;
     height: 80px;
     border: none;
@@ -86,56 +87,54 @@ body{
     box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
 }
 
-.colorPicker::-webkit-color-swatch-wrapper {
+.colorPickerInput::-webkit-color-swatch-wrapper {
     padding: 0;
     background-color: none;
 }
 
-.colorPicker::-webkit-color-swatch{
+.colorPickerInput::-webkit-color-swatch{
     border: none;
     border-radius: 50%;
 }
 
 /* size text */
-.sizeTxt{
+.sizeP{
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-/* size button */
-.sizeBtn {
+/* size Input */
+.sizeInput{
     -webkit-appearance: none;
     width: 200px;
     border-radius: 20px;
 }
 
 /* track */
-.sizeBtn::-webkit-slider-runnable-track {
+.sizeInput::-webkit-slider-runnable-track {
 height: 20px;
 border: 1px solid;
 border-radius: 20px;
 }
 
 /* track circle */
-.sizeBtn::-webkit-slider-thumb {
+.sizeInput::-webkit-slider-thumb {
 -webkit-appearance: none;
-width: 18px;
+width: 19px;
 height: 18px;
 border-radius: 50%;
+margin-left: 0.1px;
 background: hsl(0, 0%, 0%);
 }
 
 /* canvas */
-.drawCon{
+.canvasDiv{
     background-color: hsl(0, 0%, 100%);
     box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
     width: var(---canvasSize);
     height: var(---canvasSize);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-area: draw;
 }
-
