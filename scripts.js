@@ -20,6 +20,7 @@ document.documentElement.onmousedown = () => {document_mousedown = true};
 document.documentElement.onmouseup = () => {document_mousedown = false};
 
 colorPickerInput.oninput = (event) => setCurrentColor(event.target.value);
+sizeInput.onmousemove = (event) => updateSizeValue(event.target.value);
 sizeInput.onchange = (event) => changeSize(event.target.value);
 clearAllBtn.addEventListener('click', reloadCanvas);
 modeBtns.forEach(mode => {
